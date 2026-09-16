@@ -1,0 +1,1478 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frost & Fitness | AUN Yola Student Enterprise</title>
+    <meta name="description" content="Beat the Yola Heat. Fuel Your Grind. Premium density-layered smoothies & performance sportswear at American University of Nigeria (AUN, Yola)." />
+    <meta property="og:title" content="Frost & Fitness | AUN Yola" />
+    <meta property="og:description" content="Beat the Yola Heat. Fuel Your Grind. 100% Operational Readiness at The Hut." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              midnight: '#0B0F17',
+              midnightCard: 'rgba(19, 27, 42, 0.85)',
+              frost: '#00E5FF',
+              frostHover: '#33ECFF',
+              frostDark: '#00B8D4',
+              fitness: '#FF6B00',
+              fitnessHover: '#FF8533',
+            },
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+              display: ['"Outfit"', 'sans-serif'],
+            },
+            boxShadow: {
+              'frost-glow': '0 0 25px rgba(0, 229, 255, 0.35)',
+              'fitness-glow': '0 0 25px rgba(255, 107, 0, 0.4)',
+              'card-glow': '0 10px 30px -10px rgba(0, 229, 255, 0.12)',
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      body {
+        background-color: #0B0F17;
+        color: #FFFFFF;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        overflow-x: hidden;
+      }
+
+      .font-display {
+        font-family: 'Outfit', sans-serif;
+      }
+
+      .glass-card {
+        background: rgba(19, 27, 42, 0.8);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .glass-card-frost {
+        background: rgba(11, 25, 42, 0.88);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(0, 229, 255, 0.22);
+      }
+
+      .glass-card-fitness {
+        background: rgba(30, 20, 15, 0.88);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 107, 0, 0.22);
+      }
+
+      .text-gradient-frost {
+        background: linear-gradient(135deg, #FFFFFF 0%, #00E5FF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .text-gradient-fitness {
+        background: linear-gradient(135deg, #FF6B00 0%, #FFB800 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .text-gradient-dual {
+        background: linear-gradient(135deg, #00E5FF 0%, #FFFFFF 50%, #FF6B00 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      @keyframes pulse-slow {
+        0%, 100% { opacity: 0.25; transform: scale(1); }
+        50% { opacity: 0.55; transform: scale(1.06); }
+      }
+
+      .animate-pulse-slow {
+        animation: pulse-slow 6s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+
+      .animate-float {
+        animation: float 4s ease-in-out infinite;
+      }
+
+      @keyframes swirl-rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .animate-swirl {
+        animation: swirl-rotate 25s linear infinite;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0B0F17;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1E293B;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00E5FF;
+      }
+
+      /* Layering Swirl Simulation */
+      .swirl-layer-top {
+        background: linear-gradient(180deg, rgba(0, 229, 255, 0.95) 0%, rgba(0, 184, 212, 0.75) 100%);
+      }
+      .swirl-layer-mid {
+        background: linear-gradient(180deg, rgba(255, 107, 0, 0.95) 0%, rgba(204, 85, 0, 0.8) 100%);
+      }
+      .swirl-layer-base {
+        background: linear-gradient(180deg, rgba(245, 158, 11, 0.95) 0%, rgba(180, 83, 9, 0.85) 100%);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-midnight text-white selection:bg-frost selection:text-midnight antialiased">
+
+    <!-- Background Neon Ambient Glows -->
+    <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-frost/10 rounded-full filter blur-[120px] pointer-events-none animate-pulse-slow z-0"></div>
+    <div class="fixed top-1/3 right-1/4 w-[500px] h-[500px] bg-fitness/10 rounded-full filter blur-[120px] pointer-events-none animate-pulse-slow z-0" style="animation-delay: 3s;"></div>
+
+    <!-- Top Live Announcement Bar -->
+    <div class="relative z-50 bg-slate-950/90 backdrop-blur-md border-b border-frost/20 py-2.5 px-4 text-xs sm:text-sm font-medium">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 text-xs font-semibold tracking-wide">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            🟢 Live at The Hut
+          </span>
+          <span class="text-slate-300">Central Campus Kiosk | Call/WA: <strong class="text-frost font-bold">08143069220</strong></span>
+        </div>
+        <div class="flex items-center gap-4 text-xs">
+          <span class="hidden md:inline-block text-slate-400">ENT 201 Student Enterprise Launch • AUN Yola</span>
+          <a href="#board-pitch" class="inline-flex items-center gap-1.5 text-amber-400 hover:text-amber-300 font-bold transition-colors">
+            <i data-lucide="award" class="w-4 h-4 text-amber-400"></i> Board Grant Pitch (₦500k)
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Header (Spacious, No Overlap) -->
+    <header class="sticky top-0 z-40 bg-midnight/95 backdrop-blur-xl border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+        
+        <!-- Official Logo Lockup -->
+        <a href="#" class="flex items-center gap-3 shrink-0 group">
+          <img src="/public/assets/frost-logo.svg" alt="Frost & Fitness Logo" class="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105" />
+          <div class="hidden sm:block">
+            <div class="font-display font-black text-xl sm:text-2xl tracking-tight leading-none flex items-center">
+              <span class="text-frost">FROST</span>
+              <span class="text-slate-400 mx-1 font-light">&amp;</span>
+              <span class="text-fitness">FITNESS</span>
+            </div>
+            <p class="text-[9px] sm:text-[10px] text-slate-400 tracking-widest uppercase font-semibold mt-0.5">AUN Student Enterprise</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links (Responsive Spacing, No Overlap) -->
+        <nav class="hidden lg:flex items-center gap-5 xl:gap-8 text-xs lg:text-sm font-semibold">
+          <a href="#menu" class="text-slate-300 hover:text-frost transition-colors flex items-center gap-1.5 whitespace-nowrap">
+            <i data-lucide="cup-soda" class="w-4 h-4 text-frost"></i> Smoothie Menu (₦2,300)
+          </a>
+          <a href="#sportswear" class="text-slate-300 hover:text-fitness transition-colors flex items-center gap-1.5 whitespace-nowrap">
+            <i data-lucide="shirt" class="w-4 h-4 text-fitness"></i> Sportswear &amp; Jerseys
+          </a>
+          <a href="#swirl-tech" class="text-slate-300 hover:text-frost transition-colors flex items-center gap-1.5 whitespace-nowrap">
+            <i data-lucide="layers" class="w-4 h-4 text-frost"></i> Density Tech
+          </a>
+          <a href="#board-pitch" class="text-slate-300 hover:text-amber-400 transition-colors flex items-center gap-1.5 whitespace-nowrap">
+            <i data-lucide="bar-chart-3" class="w-4 h-4 text-amber-400"></i> ₦500k Pitch
+          </a>
+        </nav>
+
+        <!-- Right Action Controls -->
+        <div class="flex items-center gap-2.5 sm:gap-3 shrink-0">
+          <button onclick="toggleCartDrawer()" class="relative group px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-fitness to-fitnessHover text-white font-display font-bold text-xs sm:text-sm tracking-wide shadow-fitness-glow hover:scale-105 transition-all duration-300 flex items-center gap-2">
+            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+            <span>Cart</span>
+            <span id="cart-badge-count" class="px-2 py-0.5 text-xs bg-black/50 rounded-full border border-white/20 text-frost font-mono font-bold">0</span>
+          </button>
+
+          <!-- Mobile Nav Menu Toggle -->
+          <button onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:bg-white/10 transition-colors">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Collapsible Mobile Menu Dropdown -->
+      <div id="mobile-menu" class="hidden lg:hidden bg-slate-950 border-b border-white/10 px-4 py-4 space-y-3">
+        <a href="#menu" onclick="toggleMobileMenu()" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 text-slate-200 font-semibold text-sm hover:text-frost">
+          <i data-lucide="cup-soda" class="w-5 h-5 text-frost"></i> Smoothie Menu (₦2,300)
+        </a>
+        <a href="#sportswear" onclick="toggleMobileMenu()" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 text-slate-200 font-semibold text-sm hover:text-fitness">
+          <i data-lucide="shirt" class="w-5 h-5 text-fitness"></i> Sportswear &amp; Jerseys
+        </a>
+        <a href="#swirl-tech" onclick="toggleMobileMenu()" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 text-slate-200 font-semibold text-sm hover:text-frost">
+          <i data-lucide="layers" class="w-5 h-5 text-frost"></i> Swirl Density Tech
+        </a>
+        <a href="#board-pitch" onclick="toggleMobileMenu()" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 text-amber-400 font-bold text-sm">
+          <i data-lucide="award" class="w-5 h-5 text-amber-400"></i> Board Grant Pitch (₦500k)
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="relative z-10">
+
+      <!-- HERO SECTION -->
+      <section class="relative pt-10 pb-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Hero Left Column -->
+            <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+              
+              <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-frost/30 text-xs sm:text-sm text-slate-200">
+                <i data-lucide="flame" class="w-4 h-4 text-fitness"></i>
+                <span>ENT 201 Enterprise Grant Proposal</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-frost"></span>
+                <span class="text-frost font-bold">The Hut Campus Hub</span>
+              </div>
+
+              <h1 class="font-display font-black text-4xl sm:text-6xl lg:text-7xl tracking-tight leading-[1.05]">
+                Beat the Yola Heat. <br />
+                <span class="text-gradient-fitness">Fuel Your Grind.</span>
+              </h1>
+
+              <p class="text-lg sm:text-xl text-slate-300 max-w-2xl leading-relaxed">
+                Featuring the <strong class="text-frost font-semibold">Swirl Palette System</strong> and <strong class="text-fitness font-semibold">Density-Based Layering</strong>. Delivered fresh across all AUN dorms, faculty blocks, and sports facilities.
+              </p>
+
+              <!-- Operational Feature Highlights -->
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-left">
+                <div class="p-3.5 rounded-xl glass-card border-white/5 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-lg bg-frost/10 text-frost flex items-center justify-center shrink-0">
+                    <i data-lucide="snowflake" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-slate-400">Yola Heat Shield</p>
+                    <p class="text-xs font-bold text-white">38°C Ready</p>
+                  </div>
+                </div>
+
+                <div class="p-3.5 rounded-xl glass-card border-white/5 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-lg bg-fitness/10 text-fitness flex items-center justify-center shrink-0">
+                    <i data-lucide="apple" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-slate-400">Jimeta Produce</p>
+                    <p class="text-xs font-bold text-white">Dabino Sweetened</p>
+                  </div>
+                </div>
+
+                <div class="p-3.5 rounded-xl glass-card border-white/5 flex items-center gap-3 col-span-2 sm:col-span-1">
+                  <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
+                    <i data-lucide="truck" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-slate-400">Campus Delivery</p>
+                    <p class="text-xs font-bold text-white">Fast Dispatch</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                <button onclick="toggleCartDrawer()" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-fitness to-fitnessHover text-white font-display font-extrabold text-base tracking-wide shadow-fitness-glow hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3">
+                  <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                  <span>Build WhatsApp Order</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+
+                <a href="#board-pitch" class="w-full sm:w-auto px-7 py-4 rounded-xl glass-card border-frost/30 text-frost font-display font-bold text-base hover:bg-frost/10 hover:border-frost transition-all duration-300 flex items-center justify-center gap-2">
+                  <i data-lucide="award" class="w-5 h-5 text-amber-400"></i>
+                  <span>Board Pitch (₦500k Grant)</span>
+                </a>
+              </div>
+
+            </div>
+
+            <!-- Hero Right Column Showcase Visual -->
+            <div class="lg:col-span-5 relative">
+              <div class="relative mx-auto max-w-md glass-card-frost p-8 rounded-3xl shadow-frost-glow border border-frost/30 animate-float">
+                
+                <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-frost animate-ping"></span>
+                    <span class="font-display font-bold text-xs uppercase tracking-wider text-frost">Density Swirl Formulation</span>
+                  </div>
+                  <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-white/10 text-slate-300">500ml Clear PET</span>
+                </div>
+
+                <!-- Product Showcase Cup Visual -->
+                <div class="relative py-6 flex justify-center items-center">
+                  <div class="absolute w-56 h-56 rounded-full bg-gradient-to-tr from-frost/20 to-fitness/20 blur-xl animate-swirl"></div>
+
+                  <div class="relative w-44 h-72 border-4 border-frost/60 rounded-b-[40px] rounded-t-xl p-2 bg-midnight/90 backdrop-blur-md shadow-2xl flex flex-col justify-end overflow-hidden">
+                    
+                    <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-4 h-24 bg-fitness rounded-t-full border border-white/20 transform -rotate-12"></div>
+                    
+                    <div class="absolute top-0 left-0 right-0 h-10 rounded-t-xl bg-frost/20 border-b-2 border-frost/60 flex items-center justify-center">
+                      <div class="w-6 h-2 bg-frost/60 rounded-full"></div>
+                    </div>
+
+                    <div class="swirl-layer-top h-24 rounded-t-lg p-3 flex flex-col justify-between text-midnight font-bold text-[11px] shadow-sm">
+                      <span class="flex items-center justify-between">
+                        <span>CROWN FROST</span>
+                        <span>0°C</span>
+                      </span>
+                      <span class="text-[9px] font-normal opacity-90">Coconut Drops &amp; Fresh Mint</span>
+                    </div>
+
+                    <div class="swirl-layer-mid h-24 p-3 flex flex-col justify-between text-white font-bold text-[11px] shadow-sm">
+                      <span class="flex items-center justify-between">
+                        <span>DABINO SWIRL</span>
+                        <span>-2°C</span>
+                      </span>
+                      <span class="text-[9px] font-normal opacity-90">Jimeta Fruits + Date Elixir</span>
+                    </div>
+
+                    <div class="swirl-layer-base h-20 rounded-b-[32px] p-3 flex flex-col justify-between text-midnight font-bold text-[11px]">
+                      <span class="flex items-center justify-between">
+                        <span>PROTEIN BASE</span>
+                        <span>-4°C</span>
+                      </span>
+                      <span class="text-[9px] font-normal opacity-90">Whey &amp; Frozen Banana</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-sm">
+                  <div>
+                    <p class="text-xs text-slate-400">Smoothie Base Price</p>
+                    <p class="font-display font-black text-2xl text-white">₦2,300 <span class="text-xs font-normal text-slate-400">/ 500ml</span></p>
+                  </div>
+                  <button onclick="addToCart('Pro-Berry Swirl (500ml)', 2300, 'Smoothies')" class="px-4 py-2 rounded-lg bg-frost text-midnight font-display font-bold hover:bg-frostHover transition-all text-xs flex items-center gap-1.5 shadow-frost-glow">
+                    <i data-lucide="plus" class="w-4 h-4"></i> Add Pro-Berry
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SWIRL TECH & DENSITY SYSTEM -->
+      <section id="swirl-tech" class="py-16 bg-slate-950/60 border-y border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+            <span class="text-xs font-bold uppercase tracking-widest text-frost px-3 py-1 rounded-full bg-frost/10 border border-frost/20">Proprietary ENT 201 Innovation</span>
+            <h2 class="font-display font-black text-3xl sm:text-5xl text-white tracking-tight">
+              The Swirl Palette System
+            </h2>
+            <p class="text-slate-300 text-base sm:text-lg">
+              Engineered specifically to withstand Yola's extreme 38°C heat without premature melting or flavor dilution.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass-card p-6 rounded-2xl border-l-4 border-amber-500 hover:border-frost transition-all duration-300">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-display font-black text-xl mb-4">
+                01
+              </div>
+              <h3 class="font-display font-bold text-xl text-white mb-2">High-Density Anchor Base</h3>
+              <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                Frozen organic banana base blended with ultra-fine whey protein. Creates a cold thermal buffer at the bottom of the PET cup.
+              </p>
+              <div class="flex items-center gap-2 text-xs font-semibold text-amber-400">
+                <i data-lucide="shield-check" class="w-4 h-4"></i> Thermal Hold: -4°C Core
+              </div>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl border-l-4 border-fitness hover:border-fitnessHover transition-all duration-300">
+              <div class="w-12 h-12 rounded-xl bg-fitness/10 text-fitness flex items-center justify-center font-display font-black text-xl mb-4">
+                02
+              </div>
+              <h3 class="font-display font-bold text-xl text-white mb-2">Viscous Dabino Berry Swirl</h3>
+              <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                Natural Dabino (Date Paste) elixir infused with Jimeta market wild berries. Provides natural fructose energy without refined sugar crash.
+              </p>
+              <div class="flex items-center gap-2 text-xs font-semibold text-fitness">
+                <i data-lucide="zap" class="w-4 h-4"></i> Sustained Workout Fructose
+              </div>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl border-l-4 border-frost hover:border-frostHover transition-all duration-300">
+              <div class="w-12 h-12 rounded-xl bg-frost/10 text-frost flex items-center justify-center font-display font-black text-xl mb-4">
+                03
+              </div>
+              <h3 class="font-display font-bold text-xl text-white mb-2">Low-Density Hydration Crown</h3>
+              <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                Chilled coconut water, crushed ice drops, and fresh mint infusion. Floats atop the cup to deliver instant electrolyte cooling on first sip.
+              </p>
+              <div class="flex items-center gap-2 text-xs font-semibold text-frost">
+                <i data-lucide="droplet" class="w-4 h-4"></i> Instant Electrolyte Hit
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SMOOTHIE MENU GRID (Yola Heat Specials - ₦2,300 Base Price) -->
+      <section id="menu" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+            <div>
+              <div class="flex items-center gap-2 text-frost text-xs font-bold uppercase tracking-wider mb-2">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                <span>Fresh Jimeta Market Produce &amp; Natural Dabino</span>
+              </div>
+              <h2 class="font-display font-black text-3xl sm:text-5xl text-white tracking-tight">
+                Yola Heat Specials <span class="text-slate-400 font-light text-2xl sm:text-3xl">(500ml Cup)</span>
+              </h2>
+            </div>
+            <div>
+              <span class="inline-block px-4 py-2 rounded-xl bg-frost/10 border border-frost/30 text-frost font-display font-extrabold text-lg">
+                Base Price: ₦2,300 <span class="text-xs font-normal text-slate-300">/ cup</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- 4-Smoothie Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Item 1: Pro-Berry Swirl -->
+            <div class="glass-card-frost rounded-2xl p-6 flex flex-col justify-between hover:scale-[1.02] transition-all duration-300 shadow-card-glow group">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="px-2.5 py-1 rounded-full bg-fitness/20 text-fitness text-[11px] font-bold tracking-wide uppercase">
+                    ⚡ Protein Anchor
+                  </span>
+                  <span class="text-xs font-bold text-slate-400">500ml</span>
+                </div>
+                
+                <div class="h-44 rounded-xl bg-gradient-to-b from-slate-900 to-midnight flex items-center justify-center relative overflow-hidden mb-5 border border-white/5">
+                  <svg class="w-24 h-36" viewBox="0 0 100 140" fill="none">
+                    <path d="M30 20 L70 20 L62 120 C61 126 56 130 50 130 C44 130 39 126 38 120 Z" stroke="#00E5FF" stroke-width="4" fill="rgba(0,229,255,0.05)"/>
+                    <path d="M35 50 Q 50 45, 65 50 L 60 115 Q 50 125, 40 115 Z" fill="#FF6B00"/>
+                    <path d="M52 5 L44 30" stroke="#FF6B00" stroke-width="5" stroke-linecap="round"/>
+                  </svg>
+                  <span class="absolute bottom-2 right-2 text-[10px] font-mono bg-black/70 px-2 py-0.5 rounded text-frost">28g Protein</span>
+                </div>
+
+                <h3 class="font-display font-bold text-xl text-white group-hover:text-frost transition-colors">Pro-Berry Swirl</h3>
+                <p class="text-xs text-slate-300 mt-2 line-clamp-2">
+                  Whey protein, frozen berries, banana anchor base. Dabino date sweetened for long-lasting workout stamina.
+                </p>
+
+                <div class="flex flex-wrap gap-1.5 mt-4">
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-white/5 text-slate-300">Whey Protein</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-white/5 text-slate-300">Jimeta Berries</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-white/5 text-slate-300">Date Elixir</span>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-slate-400 block">Price</span>
+                  <span class="font-display font-extrabold text-xl text-white">₦2,300</span>
+                </div>
+                <button onclick="addToCart('Pro-Berry Swirl (500ml)', 2300, 'Smoothies')" class="px-3.5 py-2 rounded-xl bg-fitness hover:bg-fitnessHover text-white font-display font-bold text-xs flex items-center gap-1.5 shadow-fitness-glow">
+                  <i data-lucide="plus" class="w-4 h-4"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Item 2: Citrus Hydrator -->
+            <div class="glass-card-frost rounded-2xl p-6 flex flex-col justify-between hover:scale-[1.02] transition-all duration-300 shadow-card-glow group">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="px-2.5 py-1 rounded-full bg-frost/20 text-frost text-[11px] font-bold tracking-wide uppercase">
+                    💧 Hydration Pick
+                  </span>
+                  <span class="text-xs font-bold text-slate-400">500ml</span>
+                </div>
+
+                <div class="h-44 rounded-xl bg-gradient-to-b from-slate-900 to-midnight flex items-center justify-center relative overflow-hidden mb-5 border border-white/5">
+                  <svg class="w-24 h-36" viewBox="0 0 100 140" fill="none">
+                    <path d="M30 20 L70 20 L62 120 C61 126 56 130 50 130 C44 130 39 126 38 120 Z" stroke="#00E5FF" stroke-width="4" fill="rgba(0,229,255,0.05)"/>
+                    <path d="M35 40 Q 50 35, 65 40 L 60 115 Q 50 125, 40 115 Z" fill="#00E5FF" opacity="0.8"/>
+                    <path d="M52 5 L44 30" stroke="#00E5FF" stroke-width="5" stroke-linecap="round"/>
+                  </svg>
+                  <span class="absolute bottom-2 right-2 text-[10px] font-mono bg-black/70 px-2 py-0.5 rounded text-emerald-400">Electrolytes</span>
+                </div>
+
+                <h3 class="font-display font-bold text-xl text-white group-hover:text-frost transition-colors">Citrus Hydrator</h3>
+                <p class="text-xs text-slate-300 mt-2 line-clamp-2">
+                  Layered pineapple, chilled coconut water, mint drops. Rapid electrolyte replenishment after AUN sports or gym sessions.
+                </p>
+
+                <div class="flex flex-wrap gap-1.5 mt-4">
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-white/5 text-slate-300">Pineapple</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-white/5 text-slate-300">Coconut Water</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-white/5 text-slate-300">Mint</span>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-slate-400 block">Price</span>
+                  <span class="font-display font-extrabold text-xl text-white">₦2,300</span>
+                </div>
+                <button onclick="addToCart('Citrus Hydrator (500ml)', 2300, 'Smoothies')" class="px-3.5 py-2 rounded-xl bg-frost hover:bg-frostHover text-midnight font-display font-bold text-xs flex items-center gap-1.5 shadow-frost-glow">
+                  <i data-lucide="plus" class="w-4 h-4"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Item 3: Yola Power Date -->
+            <div class="glass-card-frost rounded-2xl p-6 flex flex-col justify-between hover:scale-[1.02] transition-all duration-300 shadow-card-glow group">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-400 text-[11px] font-bold tracking-wide uppercase">
+                    🌴 Local Signature
+                  </span>
+                  <span class="text-xs font-bold text-slate-400">500ml</span>
+                </div>
+
+                <div class="h-44 rounded-xl bg-gradient-to-b from-slate-900 to-midnight flex items-center justify-center relative overflow-hidden mb-5 border border-white/5">
+                  <svg class="w-24 h-36" viewBox="0 0 100 140" fill="none">
+                    <path d="M30 20 L70 20 L62 120 C61 126 56 130 50 130 C44 130 39 126 38 120 Z" stroke="#FF6B00" stroke-width="4" fill="rgba(255,107,0,0.05)"/>
+                    <path d="M35 45 Q 50 40, 65 45 L 60 115 Q 50 125, 40 115 Z" fill="#D97706"/>
+                    <path d="M52 5 L44 30" stroke="#FF6B00" stroke-width="5" stroke-linecap="round"/>
+                  </svg>
+                  <span class="absolute bottom-2 right-2 text-[10px] font-mono bg-black/70 px-2 py-0.5 rounded text-amber-400">Dabino Power</span>
+                </div>
+
+                <h3 class="font-display font-bold text-xl text-white group-hover:text-amber-400 transition-colors">Yola Power Date</h3>
+                <p class="text-xs text-slate-300 mt-2 line-clamp-2">
+                  Pure Dabino date elixir, roasted peanut butter, icy oat milk, and natural protein. Rich, creamy local energy boost.
+                </p>
+
+                <div class="flex flex-wrap gap-1.5 mt-4">
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-white/5 text-slate-300">Dabino Dates</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-white/5 text-slate-300">Peanut Butter</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-white/5 text-slate-300">Oat Milk</span>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-slate-400 block">Price</span>
+                  <span class="font-display font-extrabold text-xl text-white">₦2,300</span>
+                </div>
+                <button onclick="addToCart('Yola Power Date (500ml)', 2300, 'Smoothies')" class="px-3.5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-midnight font-display font-bold text-xs flex items-center gap-1.5">
+                  <i data-lucide="plus" class="w-4 h-4"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Item 4: Mango Frost Shock -->
+            <div class="glass-card-frost rounded-2xl p-6 flex flex-col justify-between hover:scale-[1.02] transition-all duration-300 shadow-card-glow group">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="px-2.5 py-1 rounded-full bg-yellow-500/20 text-yellow-400 text-[11px] font-bold tracking-wide uppercase">
+                    🥭 Tropical Chill
+                  </span>
+                  <span class="text-xs font-bold text-slate-400">500ml</span>
+                </div>
+
+                <div class="h-44 rounded-xl bg-gradient-to-b from-slate-900 to-midnight flex items-center justify-center relative overflow-hidden mb-5 border border-white/5">
+                  <svg class="w-24 h-36" viewBox="0 0 100 140" fill="none">
+                    <path d="M30 20 L70 20 L62 120 C61 126 56 130 50 130 C44 130 39 126 38 120 Z" stroke="#00E5FF" stroke-width="4" fill="rgba(0,229,255,0.05)"/>
+                    <path d="M35 42 Q 50 38, 65 42 L 60 115 Q 50 125, 40 115 Z" fill="#EAB308"/>
+                    <path d="M52 5 L44 30" stroke="#EAB308" stroke-width="5" stroke-linecap="round"/>
+                  </svg>
+                  <span class="absolute bottom-2 right-2 text-[10px] font-mono bg-black/70 px-2 py-0.5 rounded text-yellow-400">Vit-C Shield</span>
+                </div>
+
+                <h3 class="font-display font-bold text-xl text-white group-hover:text-yellow-400 transition-colors">Mango Frost Shock</h3>
+                <p class="text-xs text-slate-300 mt-2 line-clamp-2">
+                  Fresh Yola mango blend, passionfruit freeze layer, coconut water base. High Vitamin C and cooling refreshment.
+                </p>
+
+                <div class="flex flex-wrap gap-1.5 mt-4">
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-white/5 text-slate-300">Fresh Mango</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-white/5 text-slate-300">Passionfruit</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-white/5 text-slate-300">Vit-C Boost</span>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-slate-400 block">Price</span>
+                  <span class="font-display font-extrabold text-xl text-white">₦2,300</span>
+                </div>
+                <button onclick="addToCart('Mango Frost Shock (500ml)', 2300, 'Smoothies')" class="px-3.5 py-2 rounded-xl bg-yellow-500 hover:bg-yellow-400 text-midnight font-display font-bold text-xs flex items-center gap-1.5">
+                  <i data-lucide="plus" class="w-4 h-4"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PERFORMANCE SPORTSWEAR & GEAR SHOP (Renamed & Standard Established Club Jerseys) -->
+      <section id="sportswear" class="py-20 bg-slate-950/80 border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+            <div>
+              <div class="flex items-center gap-2 text-fitness text-xs font-bold uppercase tracking-wider mb-2">
+                <i data-lucide="shield" class="w-4 h-4"></i>
+                <span>Official Athletic Apparel &amp; Gear</span>
+              </div>
+              <h2 class="font-display font-black text-3xl sm:text-5xl text-white tracking-tight">
+                Performance Sportswear &amp; Jerseys
+              </h2>
+            </div>
+            <p class="text-slate-400 text-sm max-w-md">
+              Top club football jerseys, NBA swingman basketball kits, and essential high-performance athletic gear.
+            </p>
+          </div>
+
+          <!-- 6-Item Expanded Athletic Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Item 1: Official Club Football Jerseys -->
+            <div class="glass-card-fitness rounded-2xl p-6 flex flex-col justify-between hover:scale-[1.01] transition-all duration-300 shadow-fitness-glow">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="px-2.5 py-1 rounded-full bg-fitness/20 text-fitness text-[11px] font-bold uppercase">⚽ Club Replica Kits</span>
+                  <span class="text-xs text-slate-400 font-mono">Sweat-Wicking</span>
+                </div>
+
+                <div class="h-44 rounded-xl bg-midnight/90 border border-white/10 flex flex-col items-center justify-center relative overflow-hidden mb-4 group p-4 text-center">
+                  <div class="w-14 h-14 rounded-full bg-fitness/10 text-fitness flex items-center justify-center group-hover:scale-110 transition-transform mb-2">
+                    <i data-lucide="shirt" class="w-8 h-8"></i>
+                  </div>
+                  <span class="text-xs font-bold text-white">Arsenal • Chelsea • Man Utd • Real Madrid • Barca</span>
+                  <span class="text-[10px] text-slate-400 mt-1">Authentic Club Matchday Editions</span>
+                </div>
+
+                <h3 class="font-display font-bold text-xl text-white">Club Replica Football Jerseys</h3>
+                <p class="text-xs text-slate-300 mt-2">
+                  Official club football jerseys (Arsenal, Chelsea, Man Utd, Real Madrid, Barcelona, Man City). Micro-mesh dry-fit fabric.
+                </p>
+
+                <div class="mt-3 space-y-2">
+                  <div>
+                    <span class="text-[11px] text-slate-400 block mb-1">Select Club Jersey:</span>
+                    <select id="football-club-choice" class="w-full px-2.5 py-1.5 rounded bg-slate-900 border border-white/10 text-xs text-white focus:outline-none focus:border-fitness">
+                      <option value="Arsenal Home/Away Kit">Arsenal (Home / Away Kit)</option>
+                      <option value="Chelsea Football Club Kit">Chelsea FC (Matchday Edition)</option>
+                      <option value="Manchester United Kit">Manchester United (Home Kit)</option>
+                      <option value="Real Madrid Kit">Real Madrid (White / Gold)</option>
+                      <option value="FC Barcelona Kit">FC Barcelona (Blaugrana)</option>
+                      <option value="Manchester City Kit">Manchester City (Sky Blue)</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <span class="text-[11px] text-slate-400 block mb-1">Select Size:</span>
+                    <div class="flex gap-1.5">
+                      <button onclick="selectItemSize(this)" class="px-2.5 py-1 rounded bg-white/10 text-xs font-bold hover:bg-fitness hover:text-white">S</button>
+                      <button onclick="selectItemSize(this)" class="px-2.5 py-1 rounded bg-white/10 text-xs font-bold hover:bg-fitness hover:text-white">M</button>
+                      <button onclick="selectItemSize(this)" class="px-2.5 py-1 rounded bg-fitness text-white text-xs font-bold">L</button>
+                      <button onclick="selectItemSize(this)" class="px-2.5 py-1 rounded bg-white/10 text-xs font-bold hover:bg-fitness hover:text-white">XL</button>
+                      <button onclick="selectItemSize(this)" class="px-2.5 py-1 rounded bg-white/10 text-xs font-bold hover:bg-fitness hover:text-white">XXL</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-slate-400 block">Price</span>
+                  <span class="font-display font-extrabold text-xl text-white">₦5,000</span>
+                </div>
+                <button onclick="addSelectedClubJersey()" class="px-3.5 py-2 rounded-xl bg-fitness hover:bg-fitnessHover text-white font-display font-bold text-xs flex items-center gap-1.5 shadow-fitness-glow">
+                  <i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Item 2: Basketball Swingman Jersey -->
+            <div class="glass-card-fitness rounded-2xl p-6 flex flex-col justify-between hover:scale-[1.01] transition-all duration-300 shadow-fitness-glow">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="px-2.5 py-1 rounded-full bg-frost/20 text-frost text-[11px] font-bold uppercase">🏀 NBA Swingman Kits</span>
+                  <span class="text-xs text-slate-400 font-mono">Sleeveless Cut</span>
+                </div>
+
+                <div class="h-44 rounded-xl bg-midnight/90 border border-white/10 flex flex-col items-center justify-center relative overflow-hidden mb-4 group p-4 text-center">
+                  <div class="w-14 h-14 rounded-full bg-frost/10 text-frost flex items-center justify-center group-hover:scale-110 transition-transform mb-2">
+                    <i data-lucide="trophy" class="w-8 h-8"></i>
+                  </div>
+                  <span class="text-xs font-bold text-white">Lakers • Bulls • Warriors • Celtics</span>
+                  <span class="text-[10px] text-slate-400 mt-1">Double-Stitched Numbers &amp; Open Mesh</span>
+                </div>
+
+                <h3 class="font-display font-bold text-xl text-white">Pro Basketball Swingman Jersey</h3>
+                <p class="text-xs text-slate-300 mt-2">
+                  Premium NBA swingman basketball jersey with double-stitched numbers, armhole trim &amp; side ventilation.
+                </p>
+
+                <div class="mt-3 space-y-2">
+                  <div>
+                    <span class="text-[11px] text-slate-400 block mb-1">Select Basketball Team:</span>
+                    <select id="bball-team-choice" class="w-full px-2.5 py-1.5 rounded bg-slate-900 border border-white/10 text-xs text-white focus:outline-none focus:border-frost">
+                      <option value="LA Lakers Swingman Jersey">LA Lakers (Gold / Purple)</option>
+                      <option value="Chicago Bulls Swingman Jersey">Chicago Bulls (Icon Red)</option>
+                      <option value="GS Warriors Swingman Jersey">Golden State Warriors (Royal / Yellow)</option>
+                      <option value="Boston Celtics Swingman Jersey">Boston Celtics (Classic Green)</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <span class="text-[11px] text-slate-400 block mb-1">Select Size:</span>
+                    <div class="flex gap-1.5">
+                      <button onclick="selectItemSize(this)" class="px-2.5 py-1 rounded bg-white/10 text-xs font-bold hover:bg-frost hover:text-midnight">M</button>
+                      <button onclick="selectItemSize(this)" class="px-2.5 py-1 rounded bg-frost text-midnight text-xs font-bold">L</button>
+                      <button onclick="selectItemSize(this)" class="px-2.5 py-1 rounded bg-white/10 text-xs font-bold hover:bg-frost hover:text-midnight">XL</button>
+                      <button onclick="selectItemSize(this)" class="px-2.5 py-1 rounded bg-white/10 text-xs font-bold hover:bg-frost hover:text-midnight">XXL</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-slate-400 block">Price</span>
+                  <span class="font-display font-extrabold text-xl text-white">₦5,500</span>
+                </div>
+                <button onclick="addSelectedBballJersey()" class="px-3.5 py-2 rounded-xl bg-frost hover:bg-frostHover text-midnight font-display font-bold text-xs flex items-center gap-1.5 shadow-frost-glow">
+                  <i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Item 3: Gym Gloves -->
+            <div class="glass-card-fitness rounded-2xl p-6 flex flex-col justify-between hover:scale-[1.01] transition-all duration-300 shadow-fitness-glow">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-400 text-[11px] font-bold uppercase">🏋️ Gym &amp; Lifting</span>
+                  <span class="text-xs text-slate-400 font-mono">Anti-Callus Grip</span>
+                </div>
+
+                <div class="h-44 rounded-xl bg-midnight/90 border border-white/10 flex flex-col items-center justify-center relative overflow-hidden mb-4 group">
+                  <div class="w-16 h-16 rounded-full bg-amber-500/10 text-amber-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <i data-lucide="hand" class="w-10 h-10"></i>
+                  </div>
+                  <span class="text-xs font-bold text-white mt-2">Reinforced Palm Padding</span>
+                  <span class="text-[10px] text-slate-400">Breathable Mesh Backing</span>
+                </div>
+
+                <h3 class="font-display font-bold text-xl text-white">Pro Anti-Slip Workout Gloves</h3>
+                <p class="text-xs text-slate-300 mt-2">
+                  Breathable mesh back with reinforced silicone palm grip and adjustable wrist wrap support. Ideal for deadlifts &amp; pullups.
+                </p>
+
+                <div class="mt-3">
+                  <span class="text-[11px] text-slate-400 block mb-1">Select Size:</span>
+                  <div class="flex gap-1.5">
+                    <button onclick="selectItemSize(this)" class="px-2.5 py-1 rounded bg-white/10 text-xs font-bold hover:bg-fitness hover:text-white">S</button>
+                    <button onclick="selectItemSize(this)" class="px-2.5 py-1 rounded bg-fitness text-white text-xs font-bold">M</button>
+                    <button onclick="selectItemSize(this)" class="px-2.5 py-1 rounded bg-white/10 text-xs font-bold hover:bg-fitness hover:text-white">L</button>
+                    <button onclick="selectItemSize(this)" class="px-2.5 py-1 rounded bg-white/10 text-xs font-bold hover:bg-fitness hover:text-white">XL</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-slate-400 block">Price</span>
+                  <span class="font-display font-extrabold text-xl text-white">₦3,000</span>
+                </div>
+                <button onclick="addToCart('Pro Anti-Slip Workout Gloves (M)', 3000, 'Sportswear')" class="px-3.5 py-2 rounded-xl bg-fitness hover:bg-fitnessHover text-white font-display font-bold text-xs flex items-center gap-1.5 shadow-fitness-glow">
+                  <i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Item 4: Athletic Cushion Socks (3-Pack) -->
+            <div class="glass-card-fitness rounded-2xl p-6 flex flex-col justify-between hover:scale-[1.01] transition-all duration-300">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-[11px] font-bold uppercase">🧦 3-Pack Bundle</span>
+                  <span class="text-xs text-slate-400 font-mono">Arch Compression</span>
+                </div>
+
+                <div class="h-44 rounded-xl bg-midnight/90 border border-white/10 flex flex-col items-center justify-center relative overflow-hidden mb-4 group">
+                  <div class="w-16 h-16 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <i data-lucide="footprints" class="w-10 h-10"></i>
+                  </div>
+                  <span class="text-xs font-bold text-white mt-2">Pro-Cushion Crew Socks</span>
+                  <span class="text-[10px] text-slate-400">Sweat Barrier + Reinforced Heel</span>
+                </div>
+
+                <h3 class="font-display font-bold text-xl text-white">Pro-Cushion Socks (3-Pack)</h3>
+                <p class="text-xs text-slate-300 mt-2">
+                  High-density cotton cushion socks engineered with midfoot arch compression to prevent blisters on campus.
+                </p>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-slate-400 block">Price</span>
+                  <span class="font-display font-extrabold text-xl text-white">₦2,000</span>
+                </div>
+                <button onclick="addToCart('Pro-Cushion Athletic Socks (3-Pack)', 2000, 'Sportswear')" class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-display font-bold text-xs flex items-center gap-1.5">
+                  <i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Item 5: Gym / Running Shoes -->
+            <div class="glass-card-fitness rounded-2xl p-6 flex flex-col justify-between hover:scale-[1.01] transition-all duration-300">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="px-2.5 py-1 rounded-full bg-purple-500/20 text-purple-400 text-[11px] font-bold uppercase">👟 Footwear</span>
+                  <span class="text-xs text-slate-400 font-mono">Responsive Sole</span>
+                </div>
+
+                <div class="h-44 rounded-xl bg-midnight/90 border border-white/10 flex flex-col items-center justify-center relative overflow-hidden mb-4 group">
+                  <div class="w-16 h-16 rounded-full bg-purple-500/10 text-purple-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <i data-lucide="zap" class="w-10 h-10"></i>
+                  </div>
+                  <span class="text-xs font-bold text-white mt-2">Speed-Flex Campus Runners</span>
+                  <span class="text-[10px] text-slate-400">Ultra-Light Breathable Knit Upper</span>
+                </div>
+
+                <h3 class="font-display font-bold text-xl text-white">Speed-Flex Campus Running Shoes</h3>
+                <p class="text-xs text-slate-300 mt-2">
+                  Ultra-light athletic trainers with shock-absorbing foam soles and breathable mesh upper for track &amp; gym workouts.
+                </p>
+
+                <div class="mt-3">
+                  <span class="text-[11px] text-slate-400 block mb-1">Select EU Size:</span>
+                  <div class="flex gap-1.5">
+                    <button onclick="selectItemSize(this)" class="px-2 py-0.5 rounded bg-white/10 text-xs font-bold hover:bg-purple-500">41</button>
+                    <button onclick="selectItemSize(this)" class="px-2 py-0.5 rounded bg-purple-500 text-white text-xs font-bold">42</button>
+                    <button onclick="selectItemSize(this)" class="px-2 py-0.5 rounded bg-white/10 text-xs font-bold hover:bg-purple-500">43</button>
+                    <button onclick="selectItemSize(this)" class="px-2 py-0.5 rounded bg-white/10 text-xs font-bold hover:bg-purple-500">44</button>
+                    <button onclick="selectItemSize(this)" class="px-2 py-0.5 rounded bg-white/10 text-xs font-bold hover:bg-purple-500">45</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-slate-400 block">Price</span>
+                  <span class="font-display font-extrabold text-xl text-white">₦12,500</span>
+                </div>
+                <button onclick="addToCart('Speed-Flex Campus Running Shoes (Size 42)', 12500, 'Sportswear')" class="px-3.5 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-display font-bold text-xs flex items-center gap-1.5">
+                  <i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Item 6: Insulated Stainless Steel Gym Flask -->
+            <div class="glass-card-fitness rounded-2xl p-6 flex flex-col justify-between hover:scale-[1.01] transition-all duration-300">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="px-2.5 py-1 rounded-full bg-frost/20 text-frost text-[11px] font-bold uppercase">🧊 24-Hr Ice Cold</span>
+                  <span class="text-xs text-slate-400 font-mono">750ml Flask</span>
+                </div>
+
+                <div class="h-44 rounded-xl bg-midnight/90 border border-white/10 flex flex-col items-center justify-center relative overflow-hidden mb-4 group">
+                  <div class="w-16 h-16 rounded-full bg-frost/10 text-frost flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <i data-lucide="container" class="w-10 h-10"></i>
+                  </div>
+                  <span class="text-xs font-bold text-white mt-2">Vacuum Insulated Flask</span>
+                  <span class="text-[10px] text-slate-400">Double Wall Stainless Steel</span>
+                </div>
+
+                <h3 class="font-display font-bold text-xl text-white">Insulated Stainless Steel Gym Flask</h3>
+                <p class="text-xs text-slate-300 mt-2">
+                  Double-wall vacuum insulated water flask (750ml). Keeps smoothies and ice water frozen for 24 hours under Yola's heat.
+                </p>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-slate-400 block">Price</span>
+                  <span class="font-display font-extrabold text-xl text-white">₦4,500</span>
+                </div>
+                <button onclick="addToCart('Insulated Stainless Steel Gym Flask (750ml)', 4500, 'Accessories')" class="px-3.5 py-2 rounded-xl bg-frost hover:bg-frostHover text-midnight font-display font-bold text-xs flex items-center gap-1.5 shadow-frost-glow">
+                  <i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BOARD PITCH METRICS & FINANCIALS SECTION (₦500,000 Grant) -->
+      <section id="board-pitch" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider">
+              <i data-lucide="award" class="w-4 h-4"></i> ENT 201 Board Evaluation Pitch
+            </div>
+            <h2 class="font-display font-black text-3xl sm:text-5xl text-white tracking-tight">
+              Operational Readiness &amp; Grant Plan
+            </h2>
+            <p class="text-slate-300 text-base sm:text-lg">
+              Detailed financial viability model proving 100% execution capability for the <strong class="text-amber-400">₦500,000 startup grant</strong> at American University of Nigeria.
+            </p>
+          </div>
+
+          <!-- 4 Core Financial KPI Metric Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            
+            <div class="glass-card p-6 rounded-2xl border-b-4 border-amber-500">
+              <p class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Startup Grant Request</p>
+              <h3 class="font-display font-black text-3xl text-amber-400 mt-2">₦500,000</h3>
+              <p class="text-xs text-slate-400 mt-2">100% Capital Seed Requirement</p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl border-b-4 border-emerald-500">
+              <p class="text-xs text-slate-400 font-semibold uppercase tracking-wider">50-Day Net Profit Projection</p>
+              <h3 class="font-display font-black text-3xl text-emerald-400 mt-2">₦3,450,000</h3>
+              <p class="text-xs text-slate-400 mt-2">Based on 60 Cup Daily Average</p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl border-b-4 border-frost">
+              <p class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Gross Profit Margin</p>
+              <h3 class="font-display font-black text-3xl text-frost mt-2">64.8%</h3>
+              <p class="text-xs text-slate-400 mt-2">Low COGS via Jimeta Wholesale</p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl border-b-4 border-fitness">
+              <p class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Customer Payback Window</p>
+              <h3 class="font-display font-black text-3xl text-fitness mt-2">12 Days</h3>
+              <p class="text-xs text-slate-400 mt-2">Zero-Friction WhatsApp Pipeline</p>
+            </div>
+
+          </div>
+
+          <!-- Breakdown Tables Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Grant Budget Utilization Table (₦500,000 Total) -->
+            <div class="lg:col-span-7 glass-card p-8 rounded-3xl border border-white/10 space-y-6">
+              <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                <h3 class="font-display font-bold text-xl text-white flex items-center gap-2">
+                  <i data-lucide="pie-chart" class="w-5 h-5 text-amber-400"></i>
+                  <span>₦500,000 Grant Capital Deployment</span>
+                </h3>
+                <span class="text-xs font-mono px-3 py-1 bg-amber-500/10 text-amber-400 rounded-full font-bold">100% Allocated</span>
+              </div>
+
+              <div class="space-y-4 text-xs sm:text-sm">
+                
+                <div class="flex items-center justify-between p-3.5 rounded-xl bg-midnight/80 border border-white/5">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-frost/10 text-frost flex items-center justify-center font-bold">1</div>
+                    <div>
+                      <p class="font-bold text-white">Commercial High-Speed Blender &amp; Freezers</p>
+                      <p class="text-[11px] text-slate-400">Heavy duty ice-crushing motor &amp; deep cold storage</p>
+                    </div>
+                  </div>
+                  <span class="font-display font-bold text-base text-white">₦220,000</span>
+                </div>
+
+                <div class="flex items-center justify-between p-3.5 rounded-xl bg-midnight/80 border border-white/5">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-fitness/10 text-fitness flex items-center justify-center font-bold">2</div>
+                    <div>
+                      <p class="font-bold text-white">Initial Jimeta Produce &amp; Whey Protein Stock</p>
+                      <p class="text-[11px] text-slate-400">Bulk organic berries, dates (Dabino), bananas &amp; isolate</p>
+                    </div>
+                  </div>
+                  <span class="font-display font-bold text-base text-white">₦130,000</span>
+                </div>
+
+                <div class="flex items-center justify-between p-3.5 rounded-xl bg-midnight/80 border border-white/5">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold">3</div>
+                    <div>
+                      <p class="font-bold text-white">Custom 500ml PET Cups, Straws &amp; Heat Seals</p>
+                      <p class="text-[11px] text-slate-400">Branded clear cups with leak-proof transport seals</p>
+                    </div>
+                  </div>
+                  <span class="font-display font-bold text-base text-white">₦75,000</span>
+                </div>
+
+                <div class="flex items-center justify-between p-3.5 rounded-xl bg-midnight/80 border border-white/5">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold">4</div>
+                    <div>
+                      <p class="font-bold text-white">"The Hut" Kiosk Setup &amp; Branding</p>
+                      <p class="text-[11px] text-slate-400">Neon signage, staff aprons &amp; sanitation kit</p>
+                    </div>
+                  </div>
+                  <span class="font-display font-bold text-base text-white">₦75,000</span>
+                </div>
+
+                <div class="pt-3 border-t border-white/10 flex items-center justify-between text-base font-bold text-white">
+                  <span>TOTAL STARTUP GRANT REQUIRED</span>
+                  <span class="font-display text-2xl text-amber-400">₦500,000</span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Interactive Financial ROI Calculator for Board Judges -->
+            <div class="lg:col-span-5 glass-card p-8 rounded-3xl border border-frost/20 space-y-6">
+              <div class="border-b border-white/10 pb-4">
+                <span class="text-xs font-bold text-frost uppercase tracking-wider">Board Interactive Tool</span>
+                <h3 class="font-display font-bold text-xl text-white mt-1">Live Financial ROI Calculator</h3>
+              </div>
+
+              <div class="space-y-4">
+                <div>
+                  <div class="flex justify-between text-xs text-slate-300 font-semibold mb-1">
+                    <span>Daily Cups Sold (Avg):</span>
+                    <span id="roi-cup-val" class="text-frost font-bold">60 Cups/day</span>
+                  </div>
+                  <input type="range" id="roi-cups" min="20" max="150" value="60" oninput="updateRoiCalc()" class="w-full accent-frost cursor-pointer">
+                </div>
+
+                <div>
+                  <div class="flex justify-between text-xs text-slate-300 font-semibold mb-1">
+                    <span>Smoothie Cup Price:</span>
+                    <span class="text-white font-bold">₦2,300 (Fixed)</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex justify-between text-xs text-slate-300 font-semibold mb-1">
+                    <span>Operating Days (Semester):</span>
+                    <span id="roi-days-val" class="text-fitness font-bold">50 Days</span>
+                  </div>
+                  <input type="range" id="roi-days" min="20" max="90" value="50" oninput="updateRoiCalc()" class="w-full accent-fitness cursor-pointer">
+                </div>
+
+                <!-- Live Calculated Output Card -->
+                <div class="p-5 rounded-2xl bg-midnight/90 border border-white/10 space-y-3 mt-6">
+                  <div class="flex justify-between items-center text-xs">
+                    <span class="text-slate-400">Total Projected Revenue:</span>
+                    <span id="calc-rev" class="font-mono font-bold text-white text-sm">₦6,900,000</span>
+                  </div>
+                  <div class="flex justify-between items-center text-xs">
+                    <span class="text-slate-400">Estimated COGS &amp; Operations:</span>
+                    <span id="calc-cogs" class="font-mono text-slate-400 text-sm">₦3,450,000</span>
+                  </div>
+                  <div class="h-px bg-white/10 my-2"></div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-xs font-bold text-emerald-400">NET PROFIT:</span>
+                    <span id="calc-net" class="font-display font-extrabold text-2xl text-emerald-400">₦3,450,000</span>
+                  </div>
+                  <div class="flex justify-between items-center text-[11px] text-slate-400 pt-1">
+                    <span>Grant Coverage Ratio:</span>
+                    <span id="calc-ratio" class="font-bold text-amber-400">6.9x Grant Value</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- SHOPPING CART & WHATSAPP DISPATCH DRAWER -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300 flex justify-end">
+      
+      <div class="w-full max-w-lg bg-midnight border-l border-white/10 h-full flex flex-col justify-between shadow-2xl relative">
+        
+        <!-- Drawer Header -->
+        <div class="p-6 border-b border-white/10 flex items-center justify-between bg-slate-950/80">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-fitness/10 text-fitness flex items-center justify-center">
+              <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-lg text-white">Your Campus Order</h3>
+              <p class="text-xs text-slate-400">Select items &amp; AUN fulfillment location</p>
+            </div>
+          </div>
+          <button onclick="toggleCartDrawer()" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <!-- Scrollable Cart Content -->
+        <div class="p-6 overflow-y-auto space-y-6 flex-1">
+          
+          <!-- Selected Items List -->
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center justify-between">
+              <span>Ordered Products (<span id="cart-item-count-label">0</span>)</span>
+              <button onclick="clearCart()" class="text-fitness hover:underline text-[11px] normal-case font-semibold">Clear All</button>
+            </h4>
+
+            <div id="cart-items-container" class="space-y-3">
+              <div class="text-center py-8 text-slate-500 text-xs">
+                <i data-lucide="shopping-cart" class="w-8 h-8 mx-auto mb-2 opacity-50"></i>
+                Your order list is empty. Add smoothies or sportswear to begin!
+              </div>
+            </div>
+          </div>
+
+          <!-- Customer Contact Fields -->
+          <div class="space-y-4 pt-4 border-t border-white/10">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-frost">Customer Details</h4>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label for="cart-name" class="block text-xs font-semibold text-slate-300 mb-1">Full Name *</label>
+                <input type="text" id="cart-name" placeholder="e.g. Student Name" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-frost">
+              </div>
+              <div>
+                <label for="cart-phone" class="block text-xs font-semibold text-slate-300 mb-1">Phone / WA Line *</label>
+                <input type="tel" id="cart-phone" placeholder="e.g. 08012345678" value="08143069220" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-frost">
+              </div>
+            </div>
+
+            <!-- Enhanced AUN Fulfillment Locations -->
+            <div>
+              <label for="cart-location" class="block text-xs font-semibold text-slate-300 mb-1">AUN Campus Delivery / Pickup Tier *</label>
+              <select id="cart-location" onchange="updateCartTotals()" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-white/10 text-xs text-white focus:outline-none focus:border-frost">
+                <optgroup label="🆓 Campus Pickups (Free)">
+                  <option value="The Hut (Central Campus Kiosk)|0" selected>The Hut (Central Campus Kiosk) - Pickup [Free]</option>
+                  <option value="AUN Gym & Sports Complex Hub|0">AUN Gym & Sports Complex Hub - Pickup [Free]</option>
+                </optgroup>
+                <optgroup label="🚚 Zone 1: Academic & Admin Blocks (+₦150)">
+                  <option value="Zone 1: Admin Building & Executive Offices|150">Zone 1: Admin Building & Executive Offices (+₦150)</option>
+                  <option value="Zone 1: School of Law (SOL) Building|150">Zone 1: School of Law (SOL) Building (+₦150)</option>
+                  <option value="Zone 1: School of IT & Computing (SITC)|150">Zone 1: School of IT & Computing (SITC) (+₦150)</option>
+                  <option value="Zone 1: School of Arts & Sciences (SAS)|150">Zone 1: School of Arts & Sciences (SAS) (+₦150)</option>
+                </optgroup>
+                <optgroup label="🚚 Zone 2: Residence Halls & Library (+₦250)">
+                  <option value="Zone 2: Aisha Kairaba Hall (Female Dorms)|250">Zone 2: Aisha Kairaba Hall (Female Dorms) (+₦250)</option>
+                  <option value="Zone 2: Volpi Hall (Male Dorms)|250">Zone 2: Volpi Hall (Male Dorms) (+₦250)</option>
+                  <option value="Zone 2: Rosaria Hall (Dorms)|250">Zone 2: Rosaria Hall (Dorms) (+₦250)</option>
+                  <option value="Zone 2: Peter Okocha Hall (Dorms)|250">Zone 2: Peter Okocha Hall (Dorms) (+₦250)</option>
+                  <option value="Zone 2: Robert Pastor Library & E-Resource Center|250">Zone 2: Robert Pastor Library & E-Resource Center (+₦250)</option>
+                  <option value="Zone 2: Student Center & Cafeteria|250">Zone 2: Student Center & Cafeteria (+₦250)</option>
+                </optgroup>
+                <optgroup label="🚚 Zone 3: Outer Sports & Residence (+₦400)">
+                  <option value="Zone 3: Outer Sports Complex, Oval & Track|400">Zone 3: Outer Sports Complex, Oval & Track (+₦400)</option>
+                  <option value="Zone 3: AUN Hotel & Conference Center|400">Zone 3: AUN Hotel & Conference Center (+₦400)</option>
+                  <option value="Zone 3: Staff Quarters & Faculty Residence|400">Zone 3: Staff Quarters & Faculty Residence (+₦400)</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div>
+              <label for="cart-room" class="block text-xs font-semibold text-slate-300 mb-1">Room # / Specific Delivery Note (Optional)</label>
+              <input type="text" id="cart-room" placeholder="e.g. Room 204, Volpi Hall" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-frost">
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Drawer Footer Calculations & Dispatch Button -->
+        <div class="p-6 border-t border-white/10 bg-slate-950/90 space-y-4">
+          
+          <div class="space-y-1.5 text-xs">
+            <div class="flex justify-between text-slate-400">
+              <span>Items Subtotal:</span>
+              <span id="summary-subtotal" class="font-mono text-white">₦0</span>
+            </div>
+            <div class="flex justify-between text-slate-400">
+              <span>Campus Delivery Fee:</span>
+              <span id="summary-delivery" class="font-mono text-frost">₦0</span>
+            </div>
+            <div class="flex justify-between text-base font-bold text-white pt-2 border-t border-white/10">
+              <span>Grand Total:</span>
+              <span id="summary-total" class="font-display font-extrabold text-2xl text-emerald-400">₦0</span>
+            </div>
+          </div>
+
+          <button onclick="dispatchWhatsAppOrder()" class="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white font-display font-extrabold text-sm tracking-wide shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2.5 transition-all">
+            <i data-lucide="message-square" class="w-5 h-5"></i>
+            <span>Send Order via WhatsApp (08143069220)</span>
+          </button>
+          
+          <p class="text-[10px] text-center text-slate-500">
+            Routes directly to official AUN campus dispatch line: <strong class="text-slate-400">08143069220</strong>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ENTERPRISE FOOTER WITH DEVELOPER ATTRIBUTION -->
+    <footer class="bg-slate-950 border-t border-white/10 py-12 relative z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-white/10">
+          
+          <div class="flex items-center gap-3">
+            <img src="/public/assets/frost-logo.svg" alt="Frost & Fitness Logo" class="h-10 w-auto object-contain" />
+            <div>
+              <div class="font-display font-black text-xl tracking-tight leading-none flex items-center">
+                <span class="text-frost">FROST</span>
+                <span class="text-slate-400 mx-1 font-light">&amp;</span>
+                <span class="text-fitness">FITNESS</span>
+              </div>
+              <p class="text-[10px] text-slate-400">American University of Nigeria • Yola, Adamawa State</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-center gap-6 text-xs font-semibold text-slate-400">
+            <span>Official Hotline: <strong class="text-frost">08143069220</strong></span>
+            <span>Primary Hub: <strong class="text-white">The Hut Kiosk</strong></span>
+            <span class="text-amber-400 font-bold">₦500,000 Grant Pitch Ready</span>
+          </div>
+
+        </div>
+
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+          <p>An ENT 201 Student Enterprise Venture | AUN, Yola</p>
+
+          <!-- Explicit Developer Attribution to Reda Ayinde -->
+          <p class="text-xs text-slate-300 font-medium">
+            Designed &amp; Developed by 
+            <a href="mailto:reda.ayinde@aun.edu.ng" class="text-frost hover:text-frostHover font-bold underline transition-colors">Reda Ayinde</a> 
+            (<a href="mailto:reda.ayinde@aun.edu.ng" class="text-slate-400 hover:text-white font-mono transition-colors">reda.ayinde@aun.edu.ng</a>)
+          </p>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- Vanilla JavaScript Application Logic -->
+    <script>
+      // Global Reactive Shopping Cart State
+      let cart = [];
+
+      // Initialize Lucide Icons on DOM load
+      document.addEventListener('DOMContentLoaded', () => {
+        lucide.createIcons();
+        updateRoiCalc();
+      });
+
+      // Toggle Mobile Dropdown Menu
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+      }
+
+      // Toggle Cart Drawer
+      function toggleCartDrawer() {
+        const drawer = document.getElementById('cart-drawer');
+        if (drawer.classList.contains('hidden')) {
+          drawer.classList.remove('hidden');
+          setTimeout(() => drawer.classList.remove('opacity-0'), 10);
+        } else {
+          drawer.classList.add('opacity-0');
+          setTimeout(() => drawer.classList.add('hidden'), 300);
+        }
+      }
+
+      // Size Selection Handler
+      function selectItemSize(btn) {
+        const parent = btn.parentElement;
+        parent.querySelectorAll('button').forEach(b => {
+          b.className = 'px-2.5 py-1 rounded bg-white/10 text-xs font-bold hover:bg-fitness hover:text-white';
+        });
+        btn.className = 'px-2.5 py-1 rounded bg-fitness text-white text-xs font-bold';
+      }
+
+      // Add Selected Football Club Jersey
+      function addSelectedClubJersey() {
+        const club = document.getElementById('football-club-choice').value;
+        addToCart(`${club} (Size L)`, 5000, 'Sportswear');
+      }
+
+      // Add Selected Basketball Jersey
+      function addSelectedBballJersey() {
+        const team = document.getElementById('bball-team-choice').value;
+        addToCart(`${team} (Size L)`, 5500, 'Sportswear');
+      }
+
+      // Add Item to Cart
+      function addToCart(name, price, category) {
+        const existing = cart.find(i => i.name === name);
+        if (existing) {
+          existing.quantity += 1;
+        } else {
+          cart.push({ name, price, category, quantity: 1 });
+        }
+        renderCart();
+        
+        // Open cart drawer on add
+        const drawer = document.getElementById('cart-drawer');
+        if (drawer.classList.contains('hidden')) {
+          toggleCartDrawer();
+        }
+      }
+
+      // Modify Item Quantity in Cart
+      function changeQuantity(name, delta) {
+        const item = cart.find(i => i.name === name);
+        if (item) {
+          item.quantity += delta;
+          if (item.quantity <= 0) {
+            cart = cart.filter(i => i.name !== name);
+          }
+        }
+        renderCart();
+      }
+
+      // Clear entire cart
+      function clearCart() {
+        cart = [];
+        renderCart();
+      }
+
+      // Render Cart Contents & Dynamic Calculations
+      function renderCart() {
+        const container = document.getElementById('cart-items-container');
+        const badge = document.getElementById('cart-badge-count');
+        const countLabel = document.getElementById('cart-item-count-label');
+
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        badge.innerText = totalItems;
+        countLabel.innerText = totalItems;
+
+        if (cart.length === 0) {
+          container.innerHTML = `
+            <div class="text-center py-8 text-slate-500 text-xs">
+              <i data-lucide="shopping-cart" class="w-8 h-8 mx-auto mb-2 opacity-50"></i>
+              Your order list is empty. Select smoothies or sportswear to begin!
+            </div>
+          `;
+          lucide.createIcons();
+          updateCartTotals();
+          return;
+        }
+
+        container.innerHTML = cart.map(item => `
+          <div class="p-3.5 rounded-xl bg-slate-900 border border-white/10 flex items-center justify-between gap-3">
+            <div class="flex-1 min-w-0">
+              <p class="text-xs font-bold text-white truncate">${item.name}</p>
+              <p class="text-[11px] text-slate-400 font-mono">₦${item.price.toLocaleString()} x ${item.quantity} = <strong class="text-frost">₦${(item.price * item.quantity).toLocaleString()}</strong></p>
+            </div>
+            <div class="flex items-center gap-1.5 shrink-0">
+              <button onclick="changeQuantity('${item.name}', -1)" class="w-7 h-7 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold text-xs flex items-center justify-center">-</button>
+              <span class="w-6 text-center font-mono font-bold text-xs text-white">${item.quantity}</span>
+              <button onclick="changeQuantity('${item.name}', 1)" class="w-7 h-7 rounded-lg bg-frost text-midnight font-bold text-xs flex items-center justify-center">+</button>
+            </div>
+          </div>
+        `).join('');
+
+        updateCartTotals();
+      }
+
+      // Calculate Subtotal, Delivery Fee & Grand Total
+      function updateCartTotals() {
+        const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        const locationSelect = document.getElementById('cart-location');
+        const deliveryFee = parseInt(locationSelect.value.split('|')[1] || '0', 10);
+        const grandTotal = subtotal + deliveryFee;
+
+        document.getElementById('summary-subtotal').innerText = `₦${subtotal.toLocaleString()}`;
+        document.getElementById('summary-delivery').innerText = deliveryFee > 0 ? `+₦${deliveryFee}` : 'FREE';
+        document.getElementById('summary-total').innerText = `₦${grandTotal.toLocaleString()}`;
+      }
+
+      // Dispatch Formatted Multi-Item Order via WhatsApp
+      function dispatchWhatsAppOrder() {
+        if (cart.length === 0) {
+          alert('Please add at least one smoothie or sportswear item to your cart before ordering!');
+          return;
+        }
+
+        const name = document.getElementById('cart-name').value.trim() || 'AUN Student';
+        const phone = document.getElementById('cart-phone').value.trim() || '08143069220';
+        const locationVal = document.getElementById('cart-location').value;
+        const [locationName, deliveryFeeStr] = locationVal.split('|');
+        const deliveryFee = parseInt(deliveryFeeStr, 10);
+        const roomNote = document.getElementById('cart-room').value.trim();
+
+        const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        const grandTotal = subtotal + deliveryFee;
+
+        // Build Multi-Item Message String
+        let msg = `🥤 *FROST & FITNESS - AUN CAMPUS DISPATCH*\n`;
+        msg += `----------------------------------\n`;
+        msg += `👤 *Customer:* ${name} (${phone})\n`;
+        msg += `📍 *Fulfillment:* ${locationName}\n`;
+        if (roomNote) {
+          msg += `🏠 *Delivery Note:* ${roomNote}\n`;
+        }
+        msg += `\n🛒 *ORDERED ITEMS:*\n`;
+
+        cart.forEach((item, index) => {
+          msg += `${index + 1}. *${item.quantity}x* ${item.name} - ₦${(item.price * item.quantity).toLocaleString()}\n`;
+        });
+
+        msg += `----------------------------------\n`;
+        msg += `💵 *Items Subtotal:* ₦${subtotal.toLocaleString()}\n`;
+        msg += `🚚 *Delivery Fee:* ${deliveryFee > 0 ? `+₦${deliveryFee}` : 'FREE (The Hut Pickup)'}\n`;
+        msg += `💰 *GRAND TOTAL:* ₦${grandTotal.toLocaleString()}\n`;
+        msg += `----------------------------------\n`;
+        msg += `⚡ *Ready for instant fulfillment from The Hut Kiosk!*`;
+
+        const encoded = encodeURIComponent(msg);
+        const waUrl = `https://wa.me/2348143069220?text=${encoded}`;
+        
+        window.open(waUrl, '_blank');
+      }
+
+      // Live Financial ROI Calculator for Board Judges (₦500,000 Grant)
+      function updateRoiCalc() {
+        const cups = parseInt(document.getElementById('roi-cups').value, 10);
+        const days = parseInt(document.getElementById('roi-days').value, 10);
+        
+        document.getElementById('roi-cup-val').innerText = `${cups} Cups/day`;
+        document.getElementById('roi-days-val').innerText = `${days} Days`;
+
+        const price = 2300;
+        const totalRevenue = cups * days * price;
+        const cogsAndOps = totalRevenue * 0.50; // 50% operational cost ratio
+        const netProfit = totalRevenue - cogsAndOps;
+        const ratio = (netProfit / 500000).toFixed(1);
+
+        document.getElementById('calc-rev').innerText = `₦${totalRevenue.toLocaleString()}`;
+        document.getElementById('calc-cogs').innerText = `₦${cogsAndOps.toLocaleString()}`;
+        document.getElementById('calc-net').innerText = `₦${netProfit.toLocaleString()}`;
+        document.getElementById('calc-ratio').innerText = `${ratio}x Grant Value (₦500k Seed)`;
+      }
+    </script>
+  </body>
+</html>
