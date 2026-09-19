@@ -1,6 +1,0 @@
-{
-  "name": "Frost & Fitness",
-  "description": "High-energy hybrid student enterprise launch at American University of Nigeria (AUN, Yola). Beat the Yola heat, fuel your grind.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
